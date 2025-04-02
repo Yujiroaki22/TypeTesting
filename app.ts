@@ -27,6 +27,13 @@ let person: {name: string, age: number, isPass: boolean} = {
     isPass: true
 }
 
+//classes
+//built in class
+let today : Date =new Date();
+//custom class
+class House {
+}
+let house: House =new House();
 //function
 
 //arrow function
@@ -37,8 +44,8 @@ const greet = (): void=> {
 }
 
 //never
-const logerror = (message: string):never =>{
-    throw new Error(message);
+const logerror = (message: string)=>{
+    console.log(message);
 }
 logerror("error");
 
@@ -51,3 +58,8 @@ add (5, 10);
 let addTwo = function(a: number, b: number): number{
     return a+b;
 }; 
+
+//one
+const jsonData = '{"name": "John", "age": 25 ,"isPassed":true}'; // ✅ Correct format
+const personData = JSON.parse(jsonData);
+console.log(personData);
