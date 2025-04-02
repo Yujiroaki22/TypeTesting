@@ -89,3 +89,22 @@ const logData = ({name,age} :{ name :string, age : number }): void =>{
 
 };
 logData(data);
+
+//array2
+//nested array
+ let nestedArray : string [][] = [["arr1"],["arr2"],["arr3"]];
+
+ //flex array
+ let flexArray : (string | number |boolean) [] =["jake",20,"apple",20,25,true];
+
+ //one 
+ randoms.push(true);
+
+ //two
+ let chooseFruit = fruits[0];
+
+//three
+fruits.map((f) =>
+{
+    console.log(f.toUpperCase());
+})
