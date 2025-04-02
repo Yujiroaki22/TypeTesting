@@ -59,7 +59,33 @@ let addTwo = function(a: number, b: number): number{
     return a+b;
 }; 
 
-//one
+//one 
 const jsonData = '{"name": "John", "age": 25 ,"isPassed":true}'; // ✅ Correct format
-const personData = JSON.parse(jsonData);
+
+const personData :{
+    name: string;
+    age: number;
+    isPassed: boolean;
+} = JSON.parse(jsonData);
 console.log(personData);
+
+//two and three
+let isPass : boolean | string;
+
+const permission= ( ) : void =>{
+    isPass = true;
+    console.log("Permission Granted");
+
+}
+
+//destructuring 
+const data= {
+    name : 'John',
+    age : 25,
+};
+const logData = ({name,age} :{ name :string, age : number }): void =>{
+    console.log(name);
+    console.log(age);
+
+};
+logData(data);
