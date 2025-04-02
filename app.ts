@@ -94,9 +94,10 @@ logData(data);
 //nested array
  let nestedArray : string [][] = [["arr1"],["arr2"],["arr3"]];
 
- //flex array
- let flexArray : (string | number |boolean) [] =["jake",20,"apple",20,25,true];
-
+ //flex array type alias
+ type Str=[string,number,string,number,number,boolean];
+ let flexArray : Str=["jake",20,"apple",20,25,true];
+console.log(flexArray);
  //one 
  randoms.push(true);
 
@@ -108,3 +109,20 @@ fruits.map((f) =>
 {
     console.log(f.toUpperCase());
 })
+
+//Tuple
+//fruits=> [name,price,stock]
+
+/*let banana: (string | number | boolean) [] = ["Banana",200,true ];
+console.log(banana);
+banana[1]="two thousands";
+console.log(banana);
+banana.push("you got have");
+console.log(banana);*/
+
+//type alias
+type Fruit= [string,number,boolean,string,number]
+let banana: Fruit = ["Banana",200,true,"banana",10 ];
+console.log(banana);
+let haha: Fruit=["haha",100,true,"baba",10]
+ 
