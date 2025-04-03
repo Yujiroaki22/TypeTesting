@@ -123,6 +123,38 @@ console.log(banana);*/
 //type alias
 type Fruit= [string,number,boolean,string,number]
 let banana: Fruit = ["Banana",200,true,"banana",10 ];
-console.log(banana);
-let haha: Fruit=["haha",100,true,"baba",10]
- 
+//console.log(banana);
+//let haha: Fruit=["haha",100,true,"baba",10]
+
+//interface
+
+interface Taxcalc{
+    calc (): number;
+}
+
+interface Item extends Taxcalc{
+    name : string,
+    price : number,
+    instock : boolean
+
+}
+
+let item1 = {
+    name : "orange",
+    price : 200,
+    instock : true
+}
+
+let item3 ={
+    name: "apple",
+    price : 300,
+    instock : false,
+    calc() : number{
+        return this.price + 200},
+}
+const logItem = (item: Item) : void =>{
+    console.log (`Item name is ${item.name} and price is ${item.price}$ and instock status is ${item.instock} and Total price is ${item.calc()} `);
+
+}
+
+logItem(item3)
